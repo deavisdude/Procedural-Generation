@@ -16,5 +16,9 @@ public class CameraMove : MonoBehaviour {
 			transform.Translate (new Vector3 (0, -speed));
 		if (Input.GetKey (KeyCode.D))
 			transform.Translate (new Vector3 (speed, 0));
+		if (Input.GetKey (KeyCode.UpArrow) && GetComponent<Camera>().orthographicSize > 1)
+			GetComponent<Camera> ().orthographicSize--;
+		if (Input.GetKey (KeyCode.DownArrow))
+			GetComponent<Camera> ().orthographicSize++;
 	}
 }

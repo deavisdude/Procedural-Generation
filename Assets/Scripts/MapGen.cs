@@ -7,7 +7,7 @@ public class MapGen : MonoBehaviour {
 	public static Vector2 mapBounds = new Vector2 (100, 100);
 	public GameObject tile;
 	public Color[] colors = new Color[2];
-	private Tile[,] tiles = new Tile[(int)mapBounds.x,(int)mapBounds.y];
+	private static Tile[,] tiles = new Tile[(int)mapBounds.x,(int)mapBounds.y];
 
 	public int greenThreshold = 4;
 	public int blueThreshold = 4;
@@ -78,5 +78,9 @@ public class MapGen : MonoBehaviour {
 			tiles = new Tile[(int)mapBounds.x, (int)mapBounds.y];
 			Generate ();
 		}
+	}
+
+	public static Tile[,] GetTiles() {
+		return tiles;
 	}
 }

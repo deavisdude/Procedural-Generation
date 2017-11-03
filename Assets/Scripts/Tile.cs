@@ -7,6 +7,7 @@ public class Tile {
 	private GameObject gameObject;
 	public Color color;
 	private Vector2 position;
+	public GameObject hut;
 
 	public Tile(GameObject _gameObject, Color _color, Vector2 _position){
 		gameObject = _gameObject;
