@@ -21,8 +21,9 @@ public class PlayerControl : MonoBehaviour {
 		Tile tile = tiles [(int)x, (int)y];
 
 		if (tile.hut == null && tile.color != Color.blue) {
-			GameObject hut = Instantiate (hutPrefab, new Vector3 (x, y, 0), hutPrefab.transform.rotation);
+			GameObject hut = Instantiate (hutPrefab, new Vector3 (x, y, -1), hutPrefab.transform.rotation);
 			tile.hut = hut;
+			Censuscript.huts.Add (tile);
 			return hut;
 		} else
 			return null;
